@@ -1,4 +1,5 @@
-﻿$('#btnAddrecord').click(function () {
+﻿/* ------------- To add open the popup to add data------------  */
+$('#btnAddrecord').click(function () {
     $('#mdlregistration').modal('show');
     $('#modaltitle').text('Add Record');
     $('#btnUpdate').hide();
@@ -6,7 +7,7 @@
     getCityList();
 });
 
-
+/* ------------- To insert registration data ------------  */
 $('#btnSubmit').click(function (e) {
     var result = Validate(e);
     e.preventDefault();
@@ -37,6 +38,7 @@ $('#btnSubmit').click(function (e) {
         }
     });
 });
+/* ------------- To Update registration data ------------  */
 $('#btnUpdate').click(function () {
     let formData = {
         Id:$('#txtId').val(),
@@ -60,10 +62,12 @@ $('#btnUpdate').click(function () {
         }
     });
 });
+/* ------------- To close the modal popup ------------  */
 $('#btnCancel').click(function () {
     window.location.href = "/Registration/Index";
     HideModal();
 });
+/* ------------- method to disable and unable submit button in checkbox click------------  */
 $('#chkAgree').click(function () {
     if ($(this).is(":checked")) {
         $("#btnSubmit").removeAttr("disabled");
@@ -74,6 +78,7 @@ $('#chkAgree').click(function () {
         $("#btnUpdate").attr("disabled", "disabled");
     }
 });
+/* ------------- get data of a specific id ------------  */
 function getRegistrationDetailsByID(id) {
     $.ajax({
         type: "GET",
@@ -100,7 +105,6 @@ function getRegistrationDetailsByID(id) {
                 $("#dpState").html(optState);
                 var optCity = '<option value="' + response[0].cityID + '">' + response[0].cityName + '</option>';
                 $("#dpCities").html(optCity); 
-
             }
             else {
                 alert("someting went wrong");
@@ -109,10 +113,9 @@ function getRegistrationDetailsByID(id) {
         error: function () {
             alert("Unable to read data");
         }
-
-
     });
 }
+/* ------------- delete a record ------------  */
 function deleteRecordByID(id) {
     Swal.fire({
         title: 'Are you sure?',
@@ -136,15 +139,12 @@ function deleteRecordByID(id) {
                         window.location.href = '/Registration/Index';
                     }
                 }
-
-
             });
         }
-
-
     });
 
 }
+/* ------------- get the dropdown list for states ------------  */
 function getStateList() {
     $.ajax({
         type: "Get",
@@ -159,6 +159,7 @@ function getStateList() {
         }
     });
 }
+/* ------------- get the dropdown list for cities ------------  */
 function getCityList() {
     $("#dpState").change(function () {
         var StateID = parseInt($('#dpState').val());
@@ -183,6 +184,7 @@ function getCityList() {
         }
     });
 }
+/* ------------- validation function ------------  */
 function Validate(e) {
     const emailregex = /^[^@]+@[^@]+\.[^@]+$/;
     const mobileregex = /^(0|91)?[6-9][0-9]{9}$/;
@@ -259,6 +261,7 @@ function Validate(e) {
     }
     return isValid;
 }
+/* ------------- to hide the modal popup and empty html elements ------------  */
 function HideModal() {
     ClearData();
     $('#mdlregistration').modal('hide');
