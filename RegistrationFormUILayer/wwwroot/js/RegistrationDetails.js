@@ -9,6 +9,7 @@
 
 $('#btnSubmit').click(function (e) {
     var result = Validate(e);
+    e.preventDefault();
     if (result == false) {
         e.preventDefault();
         return false;
@@ -26,7 +27,9 @@ $('#btnSubmit').click(function (e) {
         type: "POST",
         data: formData,
         success: function (response) {
-            alert(response);
+          
+            
+            window.location.href = "/Registration/Index";
             HideModal();
         },
         error: function (request, status, error) {
@@ -49,7 +52,7 @@ $('#btnUpdate').click(function () {
         type: "POST",
         data: formData,
         success: function (response) {
-            alert(response);
+            window.location.href = "/Registration/Index";
             HideModal();
         },
         error: function (request, status, error) {
@@ -58,6 +61,7 @@ $('#btnUpdate').click(function () {
     });
 });
 $('#btnCancel').click(function () {
+    window.location.href = "/Registration/Index";
     HideModal();
 });
 $('#chkAgree').click(function () {

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RegistrationFormUILayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60790ca830d5f8cc64f420ccf40bfc6fbec27c2d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe9cf8a514e8de948cf373bf7192dfc05db99062")]
 [assembly: System.Reflection.AssemblyProductAttribute("RegistrationFormUILayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RegistrationFormUILayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

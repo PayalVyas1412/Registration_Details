@@ -40,3 +40,46 @@ F:\CRUD Operation\RegistrationFormUILayer\RegistrationFormUILayer\bin\Debug\net8
 F:\CRUD Operation\RegistrationFormUILayer\RegistrationFormUILayer\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
 F:\CRUD Operation\RegistrationFormUILayer\RegistrationFormUILayer\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 F:\CRUD Operation\RegistrationFormUILayer\RegistrationFormUILayer\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\bin\Debug\net8.0\appsettings.Development.json
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\bin\Debug\net8.0\appsettings.json
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\bin\Debug\net8.0\RegistrationFormUILayer.staticwebassets.runtime.json
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\bin\Debug\net8.0\RegistrationFormUILayer.exe
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\bin\Debug\net8.0\RegistrationFormUILayer.deps.json
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\bin\Debug\net8.0\RegistrationFormUILayer.runtimeconfig.json
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\bin\Debug\net8.0\RegistrationFormUILayer.dll
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\bin\Debug\net8.0\RegistrationFormUILayer.pdb
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\bin\Debug\net8.0\System.Data.SqlClient.dll
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\bin\Debug\net8.0\RegistrationFormBusinessLayer.dll
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\bin\Debug\net8.0\RegistrationFormDataAccessLayer.dll
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\bin\Debug\net8.0\RegistrationFormBusinessLayer.pdb
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\bin\Debug\net8.0\RegistrationFormDataAccessLayer.pdb
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\RegistrationFormUILayer.csproj.AssemblyReference.cache
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\RegistrationFormUILayer.GeneratedMSBuildEditorConfig.editorconfig
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\RegistrationFormUILayer.AssemblyInfoInputs.cache
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\RegistrationFormUILayer.AssemblyInfo.cs
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\RegistrationFormUILayer.csproj.CoreCompileInputs.cache
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\RegistrationFormUILayer.MvcApplicationPartsAssemblyInfo.cache
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\RegistrationFormUILayer.RazorAssemblyInfo.cache
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\RegistrationFormUILayer.RazorAssemblyInfo.cs
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\RegistrationFormUILayer.sourcelink.json
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\staticwebassets.build.json
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\staticwebassets.development.json
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\staticwebassets\msbuild.RegistrationFormUILayer.Microsoft.AspNetCore.StaticWebAssets.props
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\staticwebassets\msbuild.build.RegistrationFormUILayer.props
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.RegistrationFormUILayer.props
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.RegistrationFormUILayer.props
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\staticwebassets.pack.json
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\scopedcss\bundle\RegistrationFormUILayer.styles.css
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\scopedcss\projectbundle\RegistrationFormUILayer.bundle.scp.css
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\Registra.D754F751.Up2Date
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\RegistrationFormUILayer.dll
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\refint\RegistrationFormUILayer.dll
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\RegistrationFormUILayer.pdb
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\RegistrationFormUILayer.genruntimeconfig.cache
+F:\CRUD Operation\Clone github\Registration_Details\RegistrationFormUILayer\obj\Debug\net8.0\ref\RegistrationFormUILayer.dll
