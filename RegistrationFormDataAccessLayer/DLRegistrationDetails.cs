@@ -15,8 +15,49 @@ namespace RegistrationFormDataAccessLayer
     public class DLRegistrationDetails : IDLResgistrationDetails
     {
         string constr = "Server=DESKTOP-5BBKFBJ\\MSSQLSERVER16;Database=Registration;User Id=sa;Password=Payu$1402";
-
+        /// <summary>
+        /// Saves data in the database
+        /// </summary>
+        /// <param name="register"></param>
+        /// <returns></returns>
         public string saveRegistrationDetails(Register register)
+        {
+            string result = "";
+            
+                using (SqlConnection _con = new SqlConnection(constr))
+                {
+                    _con.Open();
+                    SqlCommand Cmnd = new SqlCommand("Sp_CrudOperation", _con);
+                    Cmnd.CommandType = CommandType.StoredProcedure;
+                    Cmnd.Parameters.AddWithValue("@Type", "INSERT");
+                    Cmnd.Parameters.AddWithValue("@ID", "");
+                    Cmnd.Parameters.AddWithValue("@Name", Convert.ToString(register.Name));
+                    Cmnd.Parameters.AddWithValue("@Email", Convert.ToString(register.Email));
+                    Cmnd.Parameters.AddWithValue("@Phone", Convert.ToString(register.phone));
+                    Cmnd.Parameters.AddWithValue("@Address", Convert.ToString(register.Address));
+                    Cmnd.Parameters.AddWithValue("@StateID", Convert.ToString(register.stateID));
+                    Cmnd.Parameters.AddWithValue("@CityID", Convert.ToString(register.cityID));
+                    int success = Convert.ToInt32(Cmnd.ExecuteNonQuery());
+                    if (success > 0)
+                    {
+                        result = "Inserted Successfully";
+                    }
+                    else
+                    {
+                        result = "Data not inserted";
+                    }
+                    _con.Close();
+
+                }
+            
+            return result;
+        }
+        /// <summary>
+        /// Update registration details in database
+        /// </summary>
+        /// <param name="register"></param>
+        /// <returns></returns>
+        public string updateRegistrationDetails(Register register)
         {
             string result = "";
             using (SqlConnection _con = new SqlConnection(constr))
@@ -24,8 +65,8 @@ namespace RegistrationFormDataAccessLayer
                 _con.Open();
                 SqlCommand Cmnd = new SqlCommand("Sp_CrudOperation", _con);
                 Cmnd.CommandType = CommandType.StoredProcedure;
-                Cmnd.Parameters.AddWithValue("@Type", "INSERT");
-                Cmnd.Parameters.AddWithValue("@ID", "");
+                Cmnd.Parameters.AddWithValue("@Type", "UPDATE");
+                Cmnd.Parameters.AddWithValue("@ID", Convert.ToInt32(register.ID));
                 Cmnd.Parameters.AddWithValue("@Name", Convert.ToString(register.Name));
                 Cmnd.Parameters.AddWithValue("@Email", Convert.ToString(register.Email));
                 Cmnd.Parameters.AddWithValue("@Phone", Convert.ToString(register.phone));
@@ -35,19 +76,22 @@ namespace RegistrationFormDataAccessLayer
                 int success = Convert.ToInt32(Cmnd.ExecuteNonQuery());
                 if (success > 0)
                 {
-                    result = "Inserted Successfully";
+                    result = "Update Successfully";
                 }
                 else
                 {
-                    result = "Data not inserted";
+                    result = "Data not updated";
                 }
                 _con.Close();
 
             }
-
             return result;
         }
-
+        /// <summary>
+        /// delete a record from table
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
         public string deleteRegistrationDetails(int ID)
         {
             string result = "";
@@ -70,7 +114,10 @@ namespace RegistrationFormDataAccessLayer
             }
             return result;
         }
-
+        /// <summary>
+        /// Get a list of all details from the table
+        /// </summary>
+        /// <returns></returns>
         public List<Register> getAllRegisteration()
         {
             List<Register> registers = new List<Register>();
@@ -98,6 +145,11 @@ namespace RegistrationFormDataAccessLayer
             return registers;
 
         }
+        /// <summary>
+        /// Get a particular record from database
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
 
         public List<Register> GetRegisterfromID(int ID)
         {
@@ -131,36 +183,10 @@ namespace RegistrationFormDataAccessLayer
             return registers;
         }
 
-        public string updateRegistrationDetails(Register register)
-        {
-            string result = "";
-            using (SqlConnection _con = new SqlConnection(constr))
-            {
-                _con.Open();
-                SqlCommand Cmnd = new SqlCommand("Sp_CrudOperation", _con);
-                Cmnd.CommandType = CommandType.StoredProcedure;
-                Cmnd.Parameters.AddWithValue("@Type", "UPDATE");
-                Cmnd.Parameters.AddWithValue("@ID", Convert.ToInt32(register.ID));
-                Cmnd.Parameters.AddWithValue("@Name", Convert.ToString(register.Name));
-                Cmnd.Parameters.AddWithValue("@Email", Convert.ToString(register.Email));
-                Cmnd.Parameters.AddWithValue("@Phone", Convert.ToString(register.phone));
-                Cmnd.Parameters.AddWithValue("@Address", Convert.ToString(register.Address));
-                Cmnd.Parameters.AddWithValue("@StateID", Convert.ToString(register.stateID));
-                Cmnd.Parameters.AddWithValue("@CityID", Convert.ToString(register.cityID));
-                int success = Convert.ToInt32(Cmnd.ExecuteNonQuery());
-                if (success > 0)
-                {
-                    result = "Update Successfully";
-                }
-                else
-                {
-                    result = "Data not updated";
-                }
-                _con.Close();
-
-            }
-            return result;
-        }
+     /// <summary>
+     /// Get list of State from state table to fill dropdown
+     /// </summary>
+     /// <returns></returns>
         public List<StateMaster> GetStateMasters()
         {
             List<StateMaster> states = new List<StateMaster>();
@@ -184,6 +210,10 @@ namespace RegistrationFormDataAccessLayer
             }
             return states;
         }
+        /// <summary>
+        /// Get list of City from city table to fill dropdown
+        /// </summary>
+        /// <returns></returns>
         public List<CityMaster> GetCitiesMasters(int stateID)
         {
             List<CityMaster> cities = new List<CityMaster>();

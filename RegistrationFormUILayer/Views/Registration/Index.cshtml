@@ -45,21 +45,16 @@
                             <div class="form-group">
                                 <label>Address</label>
                                 <textarea id="txtAddress" rows="2" cols="40" class="form-control" placeholder="Enter Address"></textarea>
-                                
                             </div>
                             <div class="form-group">
                                 <label>State</label>
                                 <select class="form-control" id="dpState" name="States"></select>
-                                <span id="errorState"></span>
-                              
-                                
+                                <span id="errorState"></span> 
                             </div>
                             <div class="form-group">
                                 <label>City</label>
                                 <select class="form-control" id="dpCities" name="Cities"></select>
-                                <span id="errorCity"></span>
-                               
-
+                                <span id="errorCity"></span>                             
                             </div>
                             <div class="form-group">
                                 <label>Agree</label>
@@ -79,8 +74,6 @@
 
     </div>
 </div>
-
-
 @section Scripts {
     <link href="https://cdn.datatables.net/2.1.2/css/dataTables.dataTables.css" rel="stylesheet" media='all' />
     <script src="https://cdn.datatables.net/2.1.2/js/dataTables.js"></script>
@@ -107,25 +100,19 @@
                         {
                             "data": 'Edit',
                             render: (data, type, row) => {
-                              
                                 return '<a  href="javascript:getRegistrationDetailsByID(\'' + row.id + '\')"><i class="fa fa-pencil"></i></a>';
-
                             }
                         },
                         {
                             "data": 'Delete',
                             render: (data, type, row) => {
                                 return '<a  href="javascript:deleteRecordByID(\'' + row.id + '\')"><i class="fa fa-remove"></i></a>';
-
                             }
                         }
                         ],
                     });
                 }
-            });
-            
-
-            
+            });   
         });
         
     </script>

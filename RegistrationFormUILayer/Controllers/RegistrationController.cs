@@ -7,63 +7,137 @@ namespace RegistrationFormUILayer.Controllers
 
     public class RegistrationController : Controller
     {
-        DLRegistrationDetails dLRegistrationDetails = new DLRegistrationDetails();
+        BLRegistrationDetails bLRegistrationDetails = new BLRegistrationDetails();
+        string result = "";
         [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
+        /// <summary>
+        /// This method get the list of States which are stored in the database
+        /// </summary>
+        /// <returns></returns>
         public JsonResult getStateList()
         {
-            List<StateMaster> stateMasters = new List<StateMaster>();
-            stateMasters = dLRegistrationDetails.GetStateMasters();
-            return Json(stateMasters);
+            try
+            {
+                List<StateMaster> stateMasters = new List<StateMaster>();
+                stateMasters = bLRegistrationDetails.BLGetStateMasters();
+                return Json(stateMasters);
+            }
+            catch(Exception ex)
+            {
+                result = ex.Message.ToString();
+                return Json(result);
+            }
+            
         }
+        /// <summary>
+        /// This method get the list of cities on the based of which state is selected from stored in the database
+        /// </summary>
+        /// <returns></returns>
         public JsonResult getCitiesList(int StateID)
         {
-            List<CityMaster> cityMasters = new List<CityMaster>();
-            cityMasters = dLRegistrationDetails.GetCitiesMasters(StateID);
-            return Json(cityMasters);
+            try
+            {
+                List<CityMaster> cityMasters = new List<CityMaster>();
+                cityMasters = bLRegistrationDetails.BLGetCitiesMasters(StateID);
+                return Json(cityMasters);
+            }
+            catch(Exception ex)
+            {
+                result = ex.Message.ToString();
+                return Json(result);
+            }
+            
         }
+        /// <summary>
+        /// This method will get all the record according to the id passed from the list
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet]
         public JsonResult getRegistrationById(int id)
         {
-            List<Register> registers = new List<Register>();
-            registers = dLRegistrationDetails.GetRegisterfromID(id);
-            return Json(registers);
-
+            try
+            {
+                List<Register> registers = new List<Register>();
+                registers = bLRegistrationDetails.BLGetRegisterfromID(id);
+                return Json(registers);
+            }
+            catch(Exception ex)
+            {
+                result = ex.Message.ToString();
+                return Json(result);
+            }
         }
+        /// <summary>
+        /// get the list of registration details
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
         public JsonResult getResgistrationDetails()
         {
-            List<Register> registers = new List<Register>();
-            registers = dLRegistrationDetails.getAllRegisteration();
-            return Json(registers);
+            try
+            {
+                List<Register> registers = new List<Register>();
+                registers = bLRegistrationDetails.BLgetAllRegisteration();
+                return Json(registers);
+            }
+            catch(Exception ex)
+            {
+                result = ex.Message.ToString();
+                return Json(result);
+            }
+            
         } 
-
-       [HttpPost]
+        /// <summary>
+        /// Save  or update registration data in datatabase
+        /// </summary>
+        /// <param name="register"></param>
+        /// <returns></returns>
+        [HttpPost]
         public JsonResult SaveRegistrationdetails(Register register)
         {
-            string result = "";
-            if (register.ID == 0)
+            try
             {
-                result = dLRegistrationDetails.saveRegistrationDetails(register);
-                
+                if (register.ID == 0)
+                {
+                    result = bLRegistrationDetails.BLsaveRegistrationDetails(register);
+
+                }
+                else
+                {
+                    result = bLRegistrationDetails.BLupdateRegistrationDetails(register);
+                }
             }
-            else
+            catch(Exception ex)
             {
-                result = dLRegistrationDetails.updateRegistrationDetails(register);
+                result= ex.Message.ToString();
+                
             }
             return Json(result);
         }
+        /// <summary>
+        /// To delete the record from database
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpPost]
         public JsonResult deleteRegistrationDetails(int id)
         {
-            string result = "";
-            result = dLRegistrationDetails.deleteRegistrationDetails(id);
+            try
+            {
+                result = bLRegistrationDetails.BLdeleteRegistrationDetails(id);
+                return Json(result);
+            }
+            catch(Exception ex)
+            {
+                result = ex.Message.ToString();
+            }
             return Json(result);
-        }
-       
+        }      
     }
     
 }
